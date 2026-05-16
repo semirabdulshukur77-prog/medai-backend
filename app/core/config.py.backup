@@ -1,0 +1,65 @@
+﻿# backend/app/core/config.py
+"""
+Application configuration using pydantic BaseSettings.
+
+Loads environment variables from the environment or a .env file.
+"""
+
+try:
+    from pydantic_settings import BaseSettings
+except ImportError:
+    # Fallback for older pydantic versions
+    from pydantic import BaseSettings
+
+from typing import List, Optional
+
+class Settings(BaseSettings):
+    # Database
+    DATABASE_URL: Optional[str] = "sqlite:///./data/chroma_db/chroma.sqlite3"
+
+    # LLM / AI service
+    GEMINI_API_KEY: Optional[str] = None
+    LLM_API_URL: Optional[str] = None
+    LLM_API_KEY: Optional[str] = None
+
+    # Google Maps
+    GOOGLE_MAPS_KEY: Optional[str] = None
+
+        # Required API Keys
+    groq_api_key: Optional[str] = None
+    secret_key: Optional[str] = None
+    # App Configuration
+    app_name: str = "MedAI"
+    app_env: str = "development"
+    debug: bool = True
+    # URLs
+    frontend_url: str = "http://localhost:5173"
+    backend_url: str = "http://localhost:8000"
+    # Voice Settings
+    voice_language: str = "en-US"
+    supported_languages: str = "en,am"
+
+    # Redis (optional) for caching / signaling
+    REDIS_URL: Optional[str] = None
+
+    # App
+    APP_HOST: str = "0.0.0.0"
+    APP_PORT: int = 8000
+    DEBUG: bool = False
+
+    # CORS
+    ALLOWED_ORIGINS: List[str] = ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:8080", "*"]
+
+    # Other toggles
+    USE_LLM_REASONS: bool = True
+    RECOMMENDATION_CACHE_TTL: int = 30
+
+    class Config:
+        env_file = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive = False
+
+
+settings = Settings()
+
+

@@ -1,0 +1,70 @@
+# MedAI Backend Dependencies
+# Core Framework
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# AI/LLM Integration
+groq==0.9.0
+openai==1.3.5
+google-generativeai==0.3.0
+
+# Database & Storage
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9  # For PostgreSQL
+pymongo==4.5.0  # For MongoDB (optional)
+redis==5.0.1
+
+# Medical & Healthcare
+pillow==10.1.0  # Image processing for radiology
+pydicom==2.4.3  # DICOM medical imaging (optional)
+pandas==2.1.3  # Data analysis
+numpy==1.24.3
+
+# Voice & Audio Processing
+speechrecognition==3.10.0
+pydub==0.25.1
+gtts==2.3.2
+# pyaudio==0.2.11
+
+# API & Networking
+httpx==0.25.2
+requests==2.31.0
+websockets==12.0
+aiohttp==3.9.1
+
+# Security & Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.1
+python-multipart==0.0.6
+
+# CORS & Middleware
+cors==1.0.1
+slowapi==0.1.8
+
+# Utilities & Helpers
+python-dateutil==2.8.2
+pytz==2023.3
+tzlocal==5.2
+colorlog==6.7.0
+python-json-logger==2.0.7
+
+# Testing & Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.0
+
+# Monitoring & Performance
+prometheus-client==0.19.0
+sentry-sdk==1.38.0
+
+# Ethiopian Specific
+ethiocalendar==1.1.2
