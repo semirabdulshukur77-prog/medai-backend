@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏥 MedAI Backend - Multi-Agent Medical Consultation API
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)
@@ -36,3 +37,7 @@ cp .env.example .env
 
 # Run the server
 python run.py
+=======
+# medai-backend
+MedAI - Medical AI Consultation System Backend (FastAPI)
+>>>>>>> b67845e35363cd8785ed775d86a91a3ae7bed3f8
